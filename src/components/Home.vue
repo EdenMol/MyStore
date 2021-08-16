@@ -8,7 +8,7 @@
       higher price.
       <br />
       At <strong>"Save & Load"</strong> tab, you can load data from DB or save
-      the data on DB.
+      the data at DB.
     </h5>
     <hr />
     <h4>

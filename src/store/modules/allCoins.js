@@ -1,38 +1,38 @@
-import {initializeData} from '../../data'
+import { initializeData } from '../../data'
 
 const state = {
-    coins:[]
+    coins: []
 }
 
 const mutations = {
-    'SET_COINS'(state,payload){
+    'SET_COINS'(state, payload) {
         state.coins = payload
     },
-    'RANDOM_PRICE'(){
+    'RANDOM_PRICE'() {
         state.coins.forEach(coin => {
             coin.price = (Math.random() + 3).toFixed(2)
-            
+
         })
 
     }
 }
 
 const actions = {
-    buyCoin:({commit},order)=>{
-        commit('BUY_COIN',order)
+    buyCoin: ({ commit }, order) => {
+        commit('BUY_COIN', order)
     },
-    initCoins:({commit})=>{
-        commit('SET_COINS',initializeData)
+    initCoins: ({ commit }) => {
+        commit('SET_COINS', initializeData)
     },
-    randomPrice:({commit})=>{
+    randomPrice: ({ commit }) => {
         commit('RANDOM_PRICE')
     }
 }
 
 const getters = {
-    coins: state=>{
+    coins: state => {
         return state.coins
     },
 }
 
-export default {state,mutations,actions,getters}
+export default { state, mutations, actions, getters }
